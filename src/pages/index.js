@@ -1,128 +1,58 @@
 import * as React from "react"
-import { Link } from "gatsby"
+
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import * as styles from "../components/index.module.css"
 
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-  },
-  {
-    text: "Examples",
-    url: "https://github.com/gatsbyjs/gatsby/tree/master/examples",
-    description:
-      "A collection of websites ranging from very basic to complex/complete that illustrate how to accomplish specific tasks within your Gatsby sites.",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Learn how to add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-  },
-]
-
-const samplePageLinks = [
-  {
-    text: "Page 2",
-    url: "page-2",
-    badge: false,
-    description:
-      "A simple example of linking to another page within a Gatsby site",
-  },
-  { text: "TypeScript", url: "using-typescript" },
-  { text: "Server Side Rendering", url: "using-ssr" },
-  { text: "Deferred Static Generation", url: "using-dsg" },
-]
-
-const moreLinks = [
-  { text: "Join us on Discord", url: "https://gatsby.dev/discord" },
-  {
-    text: "Documentation",
-    url: "https://gatsbyjs.com/docs/",
-  },
-  {
-    text: "Starters",
-    url: "https://gatsbyjs.com/starters/",
-  },
-  {
-    text: "Showcase",
-    url: "https://gatsbyjs.com/showcase/",
-  },
-  {
-    text: "Contributing",
-    url: "https://www.gatsbyjs.com/contributing/",
-  },
-  { text: "Issues", url: "https://github.com/gatsbyjs/gatsby/issues" },
-]
-
-const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
-
-const IndexPage = () => (
+const BlogPage = () => (
   <Layout>
-    <div className={styles.textCenter}>
-      <StaticImage
-        src="../images/example.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-      />
-      <h1>
-        Welcome to <b>Gatsby!</b>
-      </h1>
-      <p className={styles.intro}>
-        <b>Example pages:</b>{" "}
-        {samplePageLinks.map((link, i) => (
-          <React.Fragment key={link.url}>
-            <Link to={link.url}>{link.text}</Link>
-            {i !== samplePageLinks.length - 1 && <> · </>}
-          </React.Fragment>
-        ))}
-        <br />
-        Edit <code>src/pages/index.js</code> to update this page.
-      </p>
+    <div className="mt-10">
+      <h2 className="text-lg text-[#7026b9] font-bold capitalize mb-1">Blogs</h2>
     </div>
-    <ul className={styles.list}>
-      {links.map(link => (
-        <li key={link.url} className={styles.listItem}>
-          <a
-            className={styles.listItemLink}
-            href={`${link.url}${utmParameters}`}
-          >
-            {link.text} ↗
-          </a>
-          <p className={styles.listItemDescription}>{link.description}</p>
-        </li>
-      ))}
-    </ul>
-    {moreLinks.map((link, i) => (
-      <React.Fragment key={link.url}>
-        <a href={`${link.url}${utmParameters}`}>{link.text}</a>
-        {i !== moreLinks.length - 1 && <> · </>}
-      </React.Fragment>
-    ))}
+
+    <div className="border-b border-t py-4">
+      <div className="flex items-center gap-x-5">
+        <div className="h-14 w-14 rounded-full bg-gray-200">
+          <StaticImage
+            className="rounded-full w-14 h-14"
+            src="../images/user.jpeg"
+            objectPosition="top"
+            loading="eager"
+            width={64}
+            quality={95}
+            alt=""
+          />
+        </div>
+        <div>
+          <div className="flex items-center gap-x-5">
+            <h2 className="font-bold text-md">Edrisa Leigh</h2>
+            <h4 className="text-sm text-[#adadad]">Apr 16, 2022</h4>
+          </div>
+          <h3 className="text-sm text-[#adadad]">The founder & chief designer at YourUXTeam</h3>
+        </div>
+      </div>
+
+      <div className="flex items-center lg:gap-x-16 gap-y-5 flex-col-reverse mt-5 lg:flex-row">
+        <div className="w-full lg:w-[55%]">
+          <h1 className="font-bold text-2xl break-words mb-3">Psychology-Based Design Hacks That Will Make You A Better UX Designer</h1>
+          <p className="text-sm text-[#adadad] break-words">If the first throughtthat crossed your mind when you read the title of the article was "What does Psychology has to do with UX Design?" then yes, tha's what we thought too, now that we're on the samepage, let's end this article here. Cheers!</p>
+        </div>
+        <div className="w-full lg:w-[300px] h-[150px]">
+          <StaticImage
+            className="rounded-md w-full lg:w-[300px] lg:h-[150px]"
+            src="../images/img.jpeg"
+            loading="eager"
+            width="100%"
+            quality={95}
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
   </Layout>
 )
 
-/**
- * Head export to define metadata for the page
- *
- * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
- */
-export const Head = () => <Seo title="Home" />
+export const Head = () => <Seo title="Blog" />
 
-export default IndexPage
+export default BlogPage
