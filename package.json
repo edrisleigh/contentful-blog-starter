@@ -5,11 +5,15 @@
   "version": "0.1.0",
   "author": "Edrisa Leigh <leighfourever@gmail.com>",
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.9",
+    "dotenv": "^16.1.1",
     "gatsby": "^5.9.0",
     "gatsby-plugin-image": "^3.9.0",
     "gatsby-plugin-manifest": "^5.9.0",
     "gatsby-plugin-sharp": "^5.9.0",
+    "gatsby-source-contentful": "^8.10.0",
     "gatsby-source-filesystem": "^5.9.0",
+    "gatsby-transformer-remark": "^6.10.0",
     "gatsby-transformer-sharp": "^5.9.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
