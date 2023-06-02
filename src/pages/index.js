@@ -12,7 +12,9 @@ const BlogPage = ({ data }) => {
   return (
     <Layout>
       <div className="mt-10">
-        <h2 className="text-lg text-[#7026b9] font-bold capitalize mb-1">Blogs</h2>
+        <h2 className="text-lg text-[#7026b9] font-bold capitalize mb-1">
+          Blog Posts
+        </h2>
       </div>
 
       <BlogCard blogData={blogData} />
