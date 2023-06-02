@@ -2,8 +2,8 @@ require('dotenv').config();
 module.exports = {
   siteMetadata: {
     title: `Gatsby Contentful Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: `A blog with contentful (CMS): A headless content management system (CMS) that allows you to create, manage, and deliver content to your blog through a user-friendly interface.`,
+    author: `@EdrisaLeigh`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
@@ -29,7 +29,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
+        name: `gatsby-contentful-starter`,
         short_name: `starter`,
         start_url: `/`,
         background_color: `#663399`,
@@ -37,7 +37,7 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`,
       },
     },
   ],
