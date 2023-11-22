@@ -39,7 +39,7 @@ module.exports = {
     `gatsby-transformer-remark`,
     {
       resolve: "gatsby-source-contentful",
-      options: contentfulOptions,
+      options: { contentfulOptions },
     },
     {
       resolve: `gatsby-plugin-manifest`,
