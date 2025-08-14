@@ -1,6 +1,7 @@
 import * as React from "react"
 
 import Header from "./header"
+import ScoreAppEmbed from "./ScoreAppEmbed";
 
 const Layout = ({ children }) => {
   return (
